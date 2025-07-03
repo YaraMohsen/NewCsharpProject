@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 class test_ref
 {
     public int x = 10;
@@ -11,6 +12,9 @@ namespace NewCsharpProject
     {
         static void Main(string[] args)
         {
+            #region Assigment2
+
+
             #region Question1
 
             //Console.WriteLine("enter the number");
@@ -148,9 +152,39 @@ namespace NewCsharpProject
 
             #region question12
 
-            DateTime date = new DateTime(2024, 6, 14); Console.WriteLine($"The event is on {date:MM/dd/yyyy}");
+            //DateTime date = new DateTime(2024, 6, 14); Console.WriteLine($"The event is on {date:MM/dd/yyyy}");
             //The event is on 06/14/2024
             #endregion
+
+            #endregion
+
+            #region Assigment3
+            #region Write a program that takes a number from the user then print yes if that number can be divided by 3 and 4 otherwise print no
+            //Write a program that takes a number from the user then
+            //print yes if that number can be divided by 3 and 4 otherwise print no
+
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if (number % 3 == 0 && number % 4 == 0)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+            #endregion
+
+
+
+
+
+
+
+            #endregion
+
+
         }
     }
 }

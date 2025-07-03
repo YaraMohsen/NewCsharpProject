@@ -132,18 +132,24 @@ namespace NewCsharpProject
             #endregion
 
             #region question11
-            Console.Write("Enter a day : ");
-            int day=Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a day : ");
+            //int day=Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter a  month : ");
-            int month = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a  month : ");
+            //int month = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter a year: ");
-            int year = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a year: ");
+            //int year = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"Todays date is: {day},{month},{year}");
-            Console.WriteLine($"Todays date is: {day}/{month}/{year}");
-            Console.WriteLine($"Todays date is: {day}-{month}-{year}");
+            //Console.WriteLine($"Todays date is: {day},{month},{year}");
+            //Console.WriteLine($"Todays date is: {day}/{month}/{year}");
+            //Console.WriteLine($"Todays date is: {day}-{month}-{year}");
+            #endregion
+
+            #region question12
+
+            DateTime date = new DateTime(2024, 6, 14); Console.WriteLine($"The event is on {date:MM/dd/yyyy}");
+            //The event is on 06/14/2024
             #endregion
         }
     }

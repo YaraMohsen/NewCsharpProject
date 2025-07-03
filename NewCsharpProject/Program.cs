@@ -396,50 +396,68 @@ namespace NewCsharpProject
 
             #region Write a program to create a Simple Calculator.
 
-            Console.WriteLine("Simple Calculator");
-            Console.Write("Enter first number: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter second number: ");
-            double num2 = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Simple Calculator");
+            //Console.Write("Enter first number: ");
+            //double num1 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter second number: ");
+            //double num2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Choose an operation: +, -, *, / :  ");
-            char operation = Convert.ToChar(Console.ReadLine());
-            double result = 0;
+            //Console.Write("Choose an operation: +, -, *, / :  ");
+            //char operation = Convert.ToChar(Console.ReadLine());
+            //double result = 0;
 
-            if(operation =='+')
-            {
-                result = num1 + num2;
-            }
-            else if (operation == '-')
-            {
-                result = num1 - num2;
-            }
-            else if (operation == '*')
-            {
-                result = num1 * num2;
-            }
-            else if (operation == '/')
-            {
-                if(num2 != 0)
-                {
-                    result = num1 / num2;
-                }
-                else
-                {
-                    Console.WriteLine("Error: Division by zero is not allowed.");
-                    return; 
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid operation.");
-                return; 
-            }
+            //if(operation =='+')
+            //{
+            //    result = num1 + num2;
+            //}
+            //else if (operation == '-')
+            //{
+            //    result = num1 - num2;
+            //}
+            //else if (operation == '*')
+            //{
+            //    result = num1 * num2;
+            //}
+            //else if (operation == '/')
+            //{
+            //    if(num2 != 0)
+            //    {
+            //        result = num1 / num2;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Error: Division by zero is not allowed.");
+            //        return; 
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid operation.");
+            //    return; 
+            //}
 
-            Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
+            //Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
             #endregion
 
+            #region Write a program to allow the user to enter a string and print the REVERSE of it
 
+            Console.Write("Enter a string: ");
+            string inputString = Console.ReadLine();
+            char[] char_var = inputString.ToCharArray();
+
+
+            int length_var = char_var.Length;
+            for (int i = 0; i < length_var/ 2; i++)
+            {
+                char temp= inputString[i];
+                char_var[i] = char_var[length_var - 1];
+                char_var[length_var - 1] = temp;
+
+                length_var--;
+
+            }
+            Console.WriteLine($"The reverse of the string is: {new string(char_var)}");
+            #endregion
 
 
 

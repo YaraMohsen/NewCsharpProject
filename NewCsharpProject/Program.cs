@@ -237,21 +237,36 @@ namespace NewCsharpProject
 
             #region Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
 
-            Console.Write("Enter character: ");
-            string character_check = Console.ReadLine();
-            //the returned string contains from 2 bytes, the first byte is the character  and the second byte is Null terminator
-            //so we need to check the first byte only
+            //Console.Write("Enter character: ");
+            //string character_check = Console.ReadLine();
+            ////the returned string contains from 2 bytes, the first byte is the character  and the second byte is Null terminator
+            ////so we need to check the first byte only
 
-            if (character_check[0] =='a' || character_check[0] == 'e' || character_check[0] == 'i' || character_check[0] == 'o' || character_check[0] == 'u' ||
-               character_check[0] == 'A' || character_check[0] == 'E' || character_check[0] == 'I' || character_check[0] == 'O' || character_check[0] == 'U')
-            {
-                Console.WriteLine("Vowel");
-            }
-            else
-            {
-                Console.WriteLine("Consonant");
-            }
+            //if (character_check[0] =='a' || character_check[0] == 'e' || character_check[0] == 'i' || character_check[0] == 'o' || character_check[0] == 'u' ||
+            //   character_check[0] == 'A' || character_check[0] == 'E' || character_check[0] == 'I' || character_check[0] == 'O' || character_check[0] == 'U')
+            //{
+            //    Console.WriteLine("Vowel");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Consonant");
+            //}
             #endregion
+
+            #region Write a program that allows the user to insert an integer then print all numbers between 1 to that number
+
+            Console.Write("Enter integer: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for(int i = 1; i <= num; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            #endregion
+
+
+
+
             #endregion
 
 

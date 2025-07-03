@@ -80,18 +80,31 @@ namespace NewCsharpProject
             #region question8
 
             //Interest = (principal * rate * time ) /100.
-            
-            Console.Write("Enter the principal amount: ");
-            int principal = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter the rate amount: ");
-            int rate = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter the principal amount: ");
+            //int principal = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter the Time amount: ");
-            int Time = Convert.ToInt32(Console.Read());
+            //Console.Write("Enter the rate amount: ");
+            //int rate = Convert.ToInt32(Console.ReadLine());
 
-            double interest = (principal * rate * Time) / 100.0;
-            Console.WriteLine($"The interest is: {interest}%");
+            //Console.Write("Enter the Time amount: ");
+            //int Time = Convert.ToInt32(Console.Read());
+
+            //double interest = (principal * rate * Time) / 100.0;
+            //Console.WriteLine($"The interest is: {interest}%");
+            #endregion
+
+            #region question9
+            //BMI = (Weight)/(Height*Height)
+
+            Console.Write("Enter your weight in kg: ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter your height in meters: ");
+            double height = Convert.ToDouble(Console.ReadLine());
+
+            double bmi = weight / (height * height);
+               Console.WriteLine($"Your BMI is: {bmi}");
             #endregion
         }
     }

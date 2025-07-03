@@ -17,12 +17,20 @@ namespace NewCsharpProject
 
             #region Question2
 
-            String IntStringVar = "150A";
+            //String IntStringVar = "150A";
 
-            int.TryParse(IntStringVar, out int res);
-            Console.WriteLine("The string is a valid integer: " + res);
+            //int.TryParse(IntStringVar, out int res);
+            //Console.WriteLine("The string is a valid integer: " + res);
 
 
+            #endregion
+
+            #region Question3
+
+            float DividToInt = 10.6f;
+            int int_value = (int)DividToInt; //explicit casting
+
+            Console.WriteLine(int_value);
             #endregion
         }
     }

@@ -485,33 +485,48 @@ namespace NewCsharpProject
 
             Console.Write("Enter number: ");
             int num = Convert.ToInt32(Console.ReadLine());
+            int[] values_prime=new int[num];
+            int index = 0;
 
-            int flag = 1; 
-            if (num < 2)
-            {
-                flag = 0;
 
-            }
-            else
+            while (num > 0)
             {
-                for (int i = 2; i < num; i++)
+                int flag = 1;
+                if (num < 2)
                 {
-                    if (num % i == 0)
+                    flag = 0;
+
+                }
+                else
+                {
+                    for (int i = 2; i < num; i++)
                     {
-                        flag = 0;
+                        if (num % i == 0)
+                        {
+                            flag = 0;
+                        }
                     }
                 }
+                
+                if (flag == 1)
+                {
+                    values_prime[index] = num;
+                    index++;
+                }
+
+                
+                num--;
             }
-            if (flag == 1)
+            
+            for(int x= 0; x < index; x++)
             {
-                Console.WriteLine($"{num} :prime");
-            }
-            else
-            {
-                Console.WriteLine($"{num} :not prime");
+                Console.WriteLine(values_prime[x]);
             }
             #endregion
 
+            #region MyRegion
+
+            #endregion
             #endregion
 
 

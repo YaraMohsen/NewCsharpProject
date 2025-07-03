@@ -221,20 +221,37 @@ namespace NewCsharpProject
 
             #region Write a program that allows the user to insert an integer number then check If a number is even or odd
 
-            Console.Write("Enter number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter number: ");
+            //int number = Convert.ToInt32(Console.ReadLine());
 
-            if (number % 2 == 0)
-            {
-                Console.WriteLine("Even");
-            }
-            else
-            {
-                Console.WriteLine("Odd");
-            }
+            //if (number % 2 == 0)
+            //{
+            //    Console.WriteLine("Even");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Odd");
+            //}
 
             #endregion
 
+            #region Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
+
+            Console.Write("Enter character: ");
+            string character_check = Console.ReadLine();
+            //the returned string contains from 2 bytes, the first byte is the character  and the second byte is Null terminator
+            //so we need to check the first byte only
+
+            if (character_check[0] =='a' || character_check[0] == 'e' || character_check[0] == 'i' || character_check[0] == 'o' || character_check[0] == 'u' ||
+               character_check[0] == 'A' || character_check[0] == 'E' || character_check[0] == 'I' || character_check[0] == 'O' || character_check[0] == 'U')
+            {
+                Console.WriteLine("Vowel");
+            }
+            else
+            {
+                Console.WriteLine("Consonant");
+            }
+            #endregion
             #endregion
 
 

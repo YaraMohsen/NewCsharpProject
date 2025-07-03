@@ -6,7 +6,14 @@ namespace NewCsharpProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            #region Question1
+
+            Console.WriteLine("enter the number");
+            String read_number = Console.ReadLine();
+
+            Console.WriteLine("You enter :" + read_number);
+
+            #endregion
         }
     }
 }

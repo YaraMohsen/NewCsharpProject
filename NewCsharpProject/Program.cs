@@ -365,34 +365,86 @@ namespace NewCsharpProject
 
             #region Write a program to input the month number and print the number of days in that month.
 
-            Console.Write("Enter month number (1-12): ");
-            int monthNumber = Convert.ToInt32(Console.ReadLine());
-            int daysInMonth;
-            switch (monthNumber)
-            {
-                case 1: // January
-                case 3: // March
-                case 5: // May
-                case 7: // July
-                case 8: // August
-                case 10: // October
-                case 12: // December
-                    daysInMonth = 31;
-                    break;
-                case 4: // April
-                case 6: // June
-                case 9: // September
-                case 11: // November
-                    daysInMonth = 30;
-                    break;
-                case 2: // February
-                    daysInMonth = 28; // Assuming non-leap year for simplicity
-                    break;
-                default:
-                    Console.WriteLine("Invalid month number.");
-                    return; // Exit the program if the month number is invalid
-            }
+            //Console.Write("Enter month number (1-12): ");
+            //int monthNumber = Convert.ToInt32(Console.ReadLine());
+            //int daysInMonth;
+            //switch (monthNumber)
+            //{
+            //    case 1: // January
+            //    case 3: // March
+            //    case 5: // May
+            //    case 7: // July
+            //    case 8: // August
+            //    case 10: // October
+            //    case 12: // December
+            //        daysInMonth = 31;
+            //        break;
+            //    case 4: // April
+            //    case 6: // June
+            //    case 9: // September
+            //    case 11: // November
+            //        daysInMonth = 30;
+            //        break;
+            //    case 2: // February
+            //        daysInMonth = 28; // Assuming non-leap year for simplicity
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid month number.");
+            //        return; // Exit the program if the month number is invalid
+            //}
             #endregion
+
+            #region Write a program to create a Simple Calculator.
+
+            Console.WriteLine("Simple Calculator");
+            Console.Write("Enter first number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Choose an operation: +, -, *, / :  ");
+            char operation = Convert.ToChar(Console.ReadLine());
+            double result = 0;
+
+            if(operation =='+')
+            {
+                result = num1 + num2;
+            }
+            else if (operation == '-')
+            {
+                result = num1 - num2;
+            }
+            else if (operation == '*')
+            {
+                result = num1 * num2;
+            }
+            else if (operation == '/')
+            {
+                if(num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    Console.WriteLine("Error: Division by zero is not allowed.");
+                    return; 
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid operation.");
+                return; 
+            }
+
+            Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
+            #endregion
+
+
+
+
+
+
+
             #endregion
 
 

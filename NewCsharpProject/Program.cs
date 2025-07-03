@@ -462,26 +462,55 @@ namespace NewCsharpProject
             #region Write a program to allow the user to enter int and print the REVERSED of it
             //Same as above but for an integer input as we take integer as a string and can use the same logic
 
-            Console.Write("Enter a string: ");
-            string inputString = Console.ReadLine();
-            char[] char_var = inputString.ToCharArray();
+            //Console.Write("Enter a string: ");
+            //string inputString = Console.ReadLine();
+            //char[] char_var = inputString.ToCharArray();
 
 
-            int length_var = char_var.Length;
-            for (int i = 0; i < length_var / 2; i++)
-            {
-                char temp = char_var[i];
-                char_var[i] = char_var[length_var - 1];
-                char_var[length_var - 1] = temp;
+            //int length_var = char_var.Length;
+            //for (int i = 0; i < length_var / 2; i++)
+            //{
+            //    char temp = char_var[i];
+            //    char_var[i] = char_var[length_var - 1];
+            //    char_var[length_var - 1] = temp;
 
-                length_var--;
+            //    length_var--;
 
-            }
-            Console.WriteLine($"The reverse of the int is: {new string(char_var)}");
+            //}
+            //Console.WriteLine($"The reverse of the int is: {new string(char_var)}");
 
             #endregion
 
+            #region Write a program in C# Sharp to find prime numbers within a range of numbers
 
+            Console.Write("Enter number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            int flag = 1; 
+            if (num < 2)
+            {
+                flag = 0;
+
+            }
+            else
+            {
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        flag = 0;
+                    }
+                }
+            }
+            if (flag == 1)
+            {
+                Console.WriteLine($"{num} :prime");
+            }
+            else
+            {
+                Console.WriteLine($"{num} :not prime");
+            }
+            #endregion
 
             #endregion
 

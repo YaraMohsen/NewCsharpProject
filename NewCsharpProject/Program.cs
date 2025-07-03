@@ -277,19 +277,41 @@ namespace NewCsharpProject
 
             #region Write a program that allows to user to insert number then print all even numbers between 1 to this number
 
-            Console.Write("Enter integer: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter integer: ");
+            //int num = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= num; i++)
-            {
-                if(i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-                
-            }
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    if(i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+
+            //}
 
             #endregion
+
+            #region Write a program that takes two integers then prints the power
+
+            Console.Write("Enter number: "); 
+            int num = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter number: ");
+            int power = Convert.ToInt32(Console.ReadLine());
+
+            int res = 1;
+
+            for(int i = 1; i <= power; i++)
+            {
+                res *= num;
+            }
+
+            Console.WriteLine($"The result of {res} ");
+
+            #endregion
+
+
+
 
             #endregion
 

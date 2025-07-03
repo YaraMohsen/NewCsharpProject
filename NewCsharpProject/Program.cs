@@ -62,6 +62,7 @@ namespace NewCsharpProject
             Console.WriteLine($"new_obj1.x = {new_obj1.x}, new_obj2.x = {new_obj2.x}"); 
             // new_obj1 .x will also be 9 because new_obj2 is a reference to the same object as new_obj1
 
+
             #endregion
         }
     }

@@ -293,24 +293,75 @@ namespace NewCsharpProject
 
             #region Write a program that takes two integers then prints the power
 
-            Console.Write("Enter number: "); 
-            int num = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Enter number: ");
-            int power = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter number: "); 
+            //int num = Convert.ToInt32(Console.ReadLine());
 
-            int res = 1;
+            //Console.Write("Enter number: ");
+            //int power = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= power; i++)
-            {
-                res *= num;
-            }
+            //int res = 1;
 
-            Console.WriteLine($"The result of {res} ");
+            //for(int i = 1; i <= power; i++)
+            //{
+            //    res *= num;
+            //}
+
+            //Console.WriteLine($"The result of {res} ");
 
             #endregion
 
+            #region  Write a program to enter marks of five subjects and calculate total, average and percentage
 
+            Console.Write("enter 5 marks:");
+            String string_input= Console.ReadLine();
+            char[] str_marks = new char[6];
+            int counter = 0;
+
+            // Assuming the input is space-separated marks, e.g., "85 90 78 88 92"
+            int mark1=0, mark2=0, mark3=0, mark4 = 0, mark5 = 0;
+            int x = 0;
+            for (int i=0;i< string_input.Length; i++)
+            {
+                
+                str_marks[x] = string_input[i];
+                x++;
+                if (string_input[i] == ' ' || ((i+1) == string_input.Length))
+                {
+                    x = 0;
+                    counter++;
+                    if (counter == 1)
+                    {
+                        mark1 = Convert.ToInt32(new string(str_marks));
+                        str_marks = new char[6]; // Reset the array for the next mark
+                    }
+                    else if (counter == 2)
+                    {
+                        mark2 = Convert.ToInt32(new string(str_marks));
+                        str_marks = new char[6];
+                    }
+                    else if (counter == 3)
+                    {
+                        mark3 = Convert.ToInt32(new string(str_marks));
+                        str_marks = new char[6];
+                    }
+                    else if (counter == 4)
+                    {
+                        mark4 = Convert.ToInt32(new string(str_marks));
+                        str_marks = new char[6];
+                    }
+                    else if (counter == 5)
+                    {
+                        mark5 = Convert.ToInt32(new string(str_marks));
+                        str_marks = new char[6];
+                    }
+                }
+            }
+            Console.WriteLine($"The total marks is: {mark1 + mark2 + mark3 + mark4 + mark5}");
+            Console.WriteLine($"The average marks is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}");
+            Console.WriteLine($"The percentage is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}%");
+
+
+            #endregion
 
 
             #endregion

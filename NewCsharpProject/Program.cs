@@ -441,25 +441,45 @@ namespace NewCsharpProject
 
             #region Write a program to allow the user to enter a string and print the REVERSE of it
 
+            //Console.Write("Enter a string: ");
+            //string inputString = Console.ReadLine();
+            //char[] char_var = inputString.ToCharArray();
+
+
+            //int length_var = char_var.Length;
+            //for (int i = 0; i < length_var/ 2; i++)
+            //{
+            //    char temp= char_var[i];
+            //    char_var[i] = char_var[length_var - 1];
+            //    char_var[length_var - 1] = temp;
+
+            //    length_var--;
+
+            //}
+            //Console.WriteLine($"The reverse of the string is: {new string(char_var)}");
+            #endregion
+
+            #region Write a program to allow the user to enter int and print the REVERSED of it
+            //Same as above but for an integer input as we take integer as a string and can use the same logic
+
             Console.Write("Enter a string: ");
             string inputString = Console.ReadLine();
             char[] char_var = inputString.ToCharArray();
 
 
             int length_var = char_var.Length;
-            for (int i = 0; i < length_var/ 2; i++)
+            for (int i = 0; i < length_var / 2; i++)
             {
-                char temp= inputString[i];
+                char temp = char_var[i];
                 char_var[i] = char_var[length_var - 1];
                 char_var[length_var - 1] = temp;
 
                 length_var--;
 
             }
-            Console.WriteLine($"The reverse of the string is: {new string(char_var)}");
+            Console.WriteLine($"The reverse of the int is: {new string(char_var)}");
+
             #endregion
-
-
 
 
 

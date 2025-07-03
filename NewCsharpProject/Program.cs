@@ -483,49 +483,65 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to find prime numbers within a range of numbers
 
-            Console.Write("Enter number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            int[] values_prime=new int[num];
-            int index = 0;
+            //Console.Write("Enter number: ");
+            //int num = Convert.ToInt32(Console.ReadLine());
+            //int[] values_prime=new int[num];
+            //int index = 0;
 
 
-            while (num > 0)
-            {
-                int flag = 1;
-                if (num < 2)
-                {
-                    flag = 0;
+            //while (num > 0)
+            //{
+            //    int flag = 1;
+            //    if (num < 2)
+            //    {
+            //        flag = 0;
 
-                }
-                else
-                {
-                    for (int i = 2; i < num; i++)
-                    {
-                        if (num % i == 0)
-                        {
-                            flag = 0;
-                        }
-                    }
-                }
-                
-                if (flag == 1)
-                {
-                    values_prime[index] = num;
-                    index++;
-                }
+            //    }
+            //    else
+            //    {
+            //        for (int i = 2; i < num; i++)
+            //        {
+            //            if (num % i == 0)
+            //            {
+            //                flag = 0;
+            //            }
+            //        }
+            //    }
 
-                
-                num--;
-            }
-            
-            for(int x= 0; x < index; x++)
-            {
-                Console.WriteLine(values_prime[x]);
-            }
+            //    if (flag == 1)
+            //    {
+            //        values_prime[index] = num;
+            //        index++;
+            //    }
+
+
+            //    num--;
+            //}
+
+            //for(int x= 0; x < index; x++)
+            //{
+            //    Console.WriteLine(values_prime[x]);
+            //}
             #endregion
 
-            #region MyRegion
+            #region Write a program in C# Sharp to convert a decimal number into binary without using an array
 
+            Console.Write("Enter a number: ");
+            int Number = Convert.ToInt32(Console.ReadLine());
+            int[] res= new int[32]; 
+            int x = 0;
+            while (Number > 0)
+            {
+                res[x] = Number & 1;
+                Number=Number >> 1;
+                x++;
+            }
+
+            Console.Write("binary is: ");
+            for (int i = x - 1; i >= 0; i--)
+            {
+                Console.Write(res[i]);
+            }
             #endregion
             #endregion
 

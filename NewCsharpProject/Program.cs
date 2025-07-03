@@ -108,27 +108,42 @@ namespace NewCsharpProject
             #endregion
 
             #region question10
-            while (true)
-            {
-                Console.Write("Enter a temperature in: ");
-                double temp = Convert.ToDouble(Console.ReadLine());
+            //while (true)
+            //{
+            //    Console.Write("Enter a temperature in: ");
+            //    double temp = Convert.ToDouble(Console.ReadLine());
 
-                if (temp > 30)
-                {
-                    Console.WriteLine("just hot");
-                }
+            //    if (temp > 30)
+            //    {
+            //        Console.WriteLine("just hot");
+            //    }
 
-                else if (temp < 10)
-                {
-                    Console.WriteLine("just cold");
-                }
+            //    else if (temp < 10)
+            //    {
+            //        Console.WriteLine("just cold");
+            //    }
 
-                else
-                {
-                    Console.WriteLine("just good");
-                }
+            //    else
+            //    {
+            //        Console.WriteLine("just good");
+            //    }
 
-            }
+            //}
+            #endregion
+
+            #region question11
+            Console.Write("Enter a day : ");
+            int day=Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a  month : ");
+            int month = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter a year: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Todays date is: {day},{month},{year}");
+            Console.WriteLine($"Todays date is: {day}/{month}/{year}");
+            Console.WriteLine($"Todays date is: {day}-{month}-{year}");
             #endregion
         }
     }

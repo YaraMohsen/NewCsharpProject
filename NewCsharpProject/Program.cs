@@ -51,17 +51,28 @@ namespace NewCsharpProject
             #endregion
 
             #region Question6
-            test_ref new_obj1 = new test_ref();
-            test_ref new_obj2 = new test_ref();
+            //test_ref new_obj1 = new test_ref();
+            //test_ref new_obj2 = new test_ref();
 
-            new_obj1.x = 7;
-            new_obj2 = new_obj1;
+            //new_obj1.x = 7;
+            //new_obj2 = new_obj1;
 
-            new_obj2.x = 9;
+            //new_obj2.x = 9;
 
-            Console.WriteLine($"new_obj1.x = {new_obj1.x}, new_obj2.x = {new_obj2.x}"); 
-            // new_obj1 .x will also be 9 because new_obj2 is a reference to the same object as new_obj1
+            //Console.WriteLine($"new_obj1.x = {new_obj1.x}, new_obj2.x = {new_obj2.x}"); 
+            //// new_obj1 .x will also be 9 because new_obj2 is a reference to the same object as new_obj1
 
+
+            #endregion
+
+            #region question7
+            Console.Write("Enter a your first name:");
+            string str1 = Console.ReadLine();
+
+            Console.Write("Enter a your second name:");
+            string str2 = Console.ReadLine();
+
+            Console.Write($"your full name is: {str1} {str2}");
 
             #endregion
         }

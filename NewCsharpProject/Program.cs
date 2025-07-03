@@ -202,21 +202,26 @@ namespace NewCsharpProject
             Console.Write("Enter first integer1: ");
             int num3 = Convert.ToInt32(Console.ReadLine());
 
-            int max =0;
+            int max = 0;
+            int min = num1;
 
-            if(num1>num2)
+            if (num1 > num2)
             {
-                max= (num1>num3)?num1:num3;
+                max = (num1 > num3) ? num1 : num3;
+                min= (num2 < num3) ? num2 : num3;
             }
             else
             {
                 max = (num2 > num3) ? num2 : num3;
+                min = (num1 < num3) ? num1 : num3;
             }
 
             Console.WriteLine($"max num is {max}");
             #endregion
 
+            #region MyRegion
 
+            #endregion
 
             #endregion
 

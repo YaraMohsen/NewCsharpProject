@@ -312,58 +312,87 @@ namespace NewCsharpProject
 
             #region  Write a program to enter marks of five subjects and calculate total, average and percentage
 
-            Console.Write("enter 5 marks:");
-            String string_input= Console.ReadLine();
-            char[] str_marks = new char[6];
-            int counter = 0;
+            //Console.Write("enter 5 marks:");
+            //String string_input= Console.ReadLine();
+            //char[] str_marks = new char[6];
+            //int counter = 0;
 
-            // Assuming the input is space-separated marks, e.g., "85 90 78 88 92"
-            int mark1=0, mark2=0, mark3=0, mark4 = 0, mark5 = 0;
-            int x = 0;
-            for (int i=0;i< string_input.Length; i++)
-            {
-                
-                str_marks[x] = string_input[i];
-                x++;
-                if (string_input[i] == ' ' || ((i+1) == string_input.Length))
-                {
-                    x = 0;
-                    counter++;
-                    if (counter == 1)
-                    {
-                        mark1 = Convert.ToInt32(new string(str_marks));
-                        str_marks = new char[6]; // Reset the array for the next mark
-                    }
-                    else if (counter == 2)
-                    {
-                        mark2 = Convert.ToInt32(new string(str_marks));
-                        str_marks = new char[6];
-                    }
-                    else if (counter == 3)
-                    {
-                        mark3 = Convert.ToInt32(new string(str_marks));
-                        str_marks = new char[6];
-                    }
-                    else if (counter == 4)
-                    {
-                        mark4 = Convert.ToInt32(new string(str_marks));
-                        str_marks = new char[6];
-                    }
-                    else if (counter == 5)
-                    {
-                        mark5 = Convert.ToInt32(new string(str_marks));
-                        str_marks = new char[6];
-                    }
-                }
-            }
-            Console.WriteLine($"The total marks is: {mark1 + mark2 + mark3 + mark4 + mark5}");
-            Console.WriteLine($"The average marks is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}");
-            Console.WriteLine($"The percentage is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}%");
+            //// Assuming the input is space-separated marks, e.g., "85 90 78 88 92"
+            //int mark1=0, mark2=0, mark3=0, mark4 = 0, mark5 = 0;
+            //int x = 0;
+            //for (int i=0;i< string_input.Length; i++)
+            //{
+
+            //    str_marks[x] = string_input[i];
+            //    x++;
+            //    if (string_input[i] == ' ' || ((i+1) == string_input.Length))
+            //    {
+            //        x = 0;
+            //        counter++;
+            //        if (counter == 1)
+            //        {
+            //            mark1 = Convert.ToInt32(new string(str_marks));
+            //            str_marks = new char[6]; // Reset the array for the next mark
+            //        }
+            //        else if (counter == 2)
+            //        {
+            //            mark2 = Convert.ToInt32(new string(str_marks));
+            //            str_marks = new char[6];
+            //        }
+            //        else if (counter == 3)
+            //        {
+            //            mark3 = Convert.ToInt32(new string(str_marks));
+            //            str_marks = new char[6];
+            //        }
+            //        else if (counter == 4)
+            //        {
+            //            mark4 = Convert.ToInt32(new string(str_marks));
+            //            str_marks = new char[6];
+            //        }
+            //        else if (counter == 5)
+            //        {
+            //            mark5 = Convert.ToInt32(new string(str_marks));
+            //            str_marks = new char[6];
+            //        }
+            //    }
+            //}
+            //Console.WriteLine($"The total marks is: {mark1 + mark2 + mark3 + mark4 + mark5}");
+            //Console.WriteLine($"The average marks is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}");
+            //Console.WriteLine($"The percentage is: {(mark1 + mark2 + mark3 + mark4 + mark5) / 5}%");
 
 
             #endregion
 
+            #region Write a program to input the month number and print the number of days in that month.
 
+            Console.Write("Enter month number (1-12): ");
+            int monthNumber = Convert.ToInt32(Console.ReadLine());
+            int daysInMonth;
+            switch (monthNumber)
+            {
+                case 1: // January
+                case 3: // March
+                case 5: // May
+                case 7: // July
+                case 8: // August
+                case 10: // October
+                case 12: // December
+                    daysInMonth = 31;
+                    break;
+                case 4: // April
+                case 6: // June
+                case 9: // September
+                case 11: // November
+                    daysInMonth = 30;
+                    break;
+                case 2: // February
+                    daysInMonth = 28; // Assuming non-leap year for simplicity
+                    break;
+                default:
+                    Console.WriteLine("Invalid month number.");
+                    return; // Exit the program if the month number is invalid
+            }
+            #endregion
             #endregion
 
 

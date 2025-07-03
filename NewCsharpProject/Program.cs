@@ -66,14 +66,32 @@ namespace NewCsharpProject
             #endregion
 
             #region question7
-            Console.Write("Enter a your first name:");
-            string str1 = Console.ReadLine();
+            //Console.Write("Enter a your first name:");
+            //string str1 = Console.ReadLine();
 
-            Console.Write("Enter a your second name:");
-            string str2 = Console.ReadLine();
+            //Console.Write("Enter a your second name:");
+            //string str2 = Console.ReadLine();
 
-            Console.Write($"your full name is: {str1} {str2}");
+            //Console.Write($"your full name is: {str1} {str2}");
 
+            #endregion
+
+
+            #region question8
+
+            //Interest = (principal * rate * time ) /100.
+            
+            Console.Write("Enter the principal amount: ");
+            int principal = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the rate amount: ");
+            int rate = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the Time amount: ");
+            int Time = Convert.ToInt32(Console.Read());
+
+            double interest = (principal * rate * Time) / 100.0;
+            Console.WriteLine($"The interest is: {interest}%");
             #endregion
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Xml.Linq;
 class test_ref
 {
     public int x = 10;
@@ -178,22 +179,42 @@ namespace NewCsharpProject
 
             #region Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive
 
-            //Write a program that allows the user to insert an integer then
-            //print negative if it is negative number otherwise print positive
+            //Console.Write("Enter an integer: ");
+            //int userInput = Convert.ToInt32(Console.ReadLine());
+            //if (userInput < 0)
+            //{
+            //    Console.WriteLine("Negative");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Positive");
+            //}
+            #endregion
 
-            Console.Write("Enter an integer: ");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            if (userInput < 0)
+            #region Write a program that takes 3 integers from the user then prints the max element and the min element
+
+            Console.Write("Enter first integer1: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter first integer2: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter first integer1: ");
+            int num3 = Convert.ToInt32(Console.ReadLine());
+
+            int max =0;
+
+            if(num1>num2)
             {
-                Console.WriteLine("Negative");
+                max= (num1>num3)?num1:num3;
             }
             else
             {
-                Console.WriteLine("Positive");
+                max = (num2 > num3) ? num2 : num3;
             }
+
+            Console.WriteLine($"max num is {max}");
             #endregion
-
-
 
 
 

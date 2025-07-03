@@ -97,14 +97,38 @@ namespace NewCsharpProject
             #region question9
             //BMI = (Weight)/(Height*Height)
 
-            Console.Write("Enter your weight in kg: ");
-            double weight = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter your weight in kg: ");
+            //double weight = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter your height in meters: ");
-            double height = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter your height in meters: ");
+            //double height = Convert.ToDouble(Console.ReadLine());
 
-            double bmi = weight / (height * height);
-               Console.WriteLine($"Your BMI is: {bmi}");
+            //double bmi = weight / (height * height);
+            //   Console.WriteLine($"Your BMI is: {bmi}");
+            #endregion
+
+            #region question10
+            while (true)
+            {
+                Console.Write("Enter a temperature in: ");
+                double temp = Convert.ToDouble(Console.ReadLine());
+
+                if (temp > 30)
+                {
+                    Console.WriteLine("just hot");
+                }
+
+                else if (temp < 10)
+                {
+                    Console.WriteLine("just cold");
+                }
+
+                else
+                {
+                    Console.WriteLine("just good");
+                }
+
+            }
             #endregion
         }
     }

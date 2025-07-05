@@ -578,39 +578,55 @@ namespace NewCsharpProject
 
             #region Question18
 
-            while (true)
+            //while (true)
+            //{
+            //    Console.Write("Enter a duration for worker: ");
+            //    int duration = Convert.ToInt32(Console.ReadLine());
+
+            //    if (duration >=2 && duration <3)
+            //    {
+            //        Console.WriteLine("highly efficient");
+            //    }
+            //    else if (duration >= 3 && duration <4)
+            //    {
+            //        Console.WriteLine(" instructed to increase their speed");
+            //    }
+            //    else if (duration >= 4 && duration < 5)
+            //    {
+            //        Console.WriteLine("provided with training to enhance their speed");
+            //    }
+            //    else if (duration >= 5)
+            //    {
+            //        Console.WriteLine("required to leave the company");
+            //    }
+            //    else
+            //    {
+
+            //    }
+
+            //}
+            #endregion
+
+            #endregion
+
+            #region Assigment4
+
+            #region Write a program that prints an identity matrix using for loop, in other words takes a value n from the user and shows the identity table of size n * n
+
+            Console.Write("Enter the size of the identity matrix (n): ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++)
             {
-                Console.Write("Enter a duration for worker: ");
-                int duration = Convert.ToInt32(Console.ReadLine());
-                
-                if (duration >=2 && duration <3)
+                for (int j = 1; j <= n; j++)
                 {
-                    Console.WriteLine("highly efficient");
+                    Console.Write($"({i},{j} )");
                 }
-                else if (duration >= 3 && duration <4)
-                {
-                    Console.WriteLine(" instructed to increase their speed");
-                }
-                else if (duration >= 4 && duration < 5)
-                {
-                    Console.WriteLine("provided with training to enhance their speed");
-                }
-                else if (duration >= 5)
-                {
-                    Console.WriteLine("required to leave the company");
-                }
-                else
-                {
-                    
-                }
-    
+                Console.WriteLine();
             }
             #endregion
-
             #endregion
-
-
         }
     }
 }
-}
+

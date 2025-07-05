@@ -687,26 +687,55 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to find maximum and minimum element in an array
 
-            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
 
-            int max = array1[0];
-            int min = array1[0];
+            //int max = array1[0];
+            //int min = array1[0];
+
+            //for (int i = 1; i < array1.Length; i++)
+            //{
+            //    if (array1[i] > max)
+            //    {
+            //        max = array1[i];
+            //    }
+
+            //    if (array1[i] < min)
+            //    {
+            //        min = array1[i];
+            //    }
+            //}
+
+            //Console.WriteLine($"Max is: {max} , min is {min}");
+            #endregion
+
+            #region Write a program in C# Sharp to find the second largest element in an array
+
+            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            int max1 = array1[0];
+            int max2 = array1[0];
 
             for (int i = 1; i < array1.Length; i++)
             {
-                if (array1[i] > max)
+               if(array1[i] > max1)
                 {
-                    max = array1[i];
+                    max2 = max1;
+                    max1 = array1[i];       
+                }
+                else if (array1[i] > max2 && array1[i] < max1)
+                {
+                    max2 = array1[i];
                 }
 
-                if (array1[i] < min)
-                {
-                    min = array1[i];
-                }
             }
 
-            Console.WriteLine($"Max is: {max} , min is {min}");
+            Console.WriteLine($"max1:{max1}, max2={max2}");
             #endregion
+
+
+
+
+
+
 
             #endregion
         }

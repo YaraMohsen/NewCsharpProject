@@ -546,41 +546,71 @@ namespace NewCsharpProject
 
             #region  Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line
 
-            Console.Write("enter x1: ");
-            int x1 = Convert.ToInt16(Console.ReadLine());
-            Console.Write("enter y1: ");
-            int y1 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter x1: ");
+            //int x1 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter y1: ");
+            //int y1 = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("enter x2: ");
-            int x2 = Convert.ToInt16(Console.ReadLine());
-            Console.Write("enter y2: ");
-            int y2 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter x2: ");
+            //int x2 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter y2: ");
+            //int y2 = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("enter x3: ");
-            int x3 = Convert.ToInt16(Console.ReadLine());
-            Console.Write("enter y3: ");
-            int y3 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter x3: ");
+            //int x3 = Convert.ToInt16(Console.ReadLine());
+            //Console.Write("enter y3: ");
+            //int y3 = Convert.ToInt16(Console.ReadLine());
 
-            int lhs = (y2 - y1) * (x3 - x1);
-            int rhs = (y3 - y1) * (x2 - x1);
+            //int lhs = (y2 - y1) * (x3 - x1);
+            //int rhs = (y3 - y1) * (x2 - x1);
 
-            if(lhs == rhs)
-            {
-                Console.WriteLine("all points in same triangle");
-            }
-            else
-            {
-                Console.WriteLine("not all points in same triangle");
-            }
+            //if(lhs == rhs)
+            //{
+            //    Console.WriteLine("all points in same triangle");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("not all points in same triangle");
+            //}
 
 
             #endregion
 
+            #region Question18
 
+            while (true)
+            {
+                Console.Write("Enter a duration for worker: ");
+                int duration = Convert.ToInt32(Console.ReadLine());
+                
+                if (duration >=2 && duration <3)
+                {
+                    Console.WriteLine("highly efficient");
+                }
+                else if (duration >= 3 && duration <4)
+                {
+                    Console.WriteLine(" instructed to increase their speed");
+                }
+                else if (duration >= 4 && duration < 5)
+                {
+                    Console.WriteLine("provided with training to enhance their speed");
+                }
+                else if (duration >= 5)
+                {
+                    Console.WriteLine("required to leave the company");
+                }
+                else
+                {
+                    
+                }
+    
+            }
+            #endregion
 
             #endregion
 
 
         }
     }
+}
 }

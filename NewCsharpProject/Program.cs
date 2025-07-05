@@ -613,18 +613,31 @@ namespace NewCsharpProject
 
             #region Write a program that prints an identity matrix using for loop, in other words takes a value n from the user and shows the identity table of size n * n
 
-            Console.Write("Enter the size of the identity matrix (n): ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter the size of the identity matrix (n): ");
+            //int n = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= n; i++)
-            {
-                for (int j = 1; j <= n; j++)
-                {
-                    Console.Write($"({i},{j} )");
-                }
-                Console.WriteLine();
-            }
+            //for(int i = 1; i <= n; i++)
+            //{
+            //    for (int j = 1; j <= n; j++)
+            //    {
+            //        Console.Write($"({i},{j} )");
+            //    }
+            //    Console.WriteLine();
+            //}
             #endregion
+
+            #region Write a program in C# Sharp to find the sum of all elements of the array
+
+            int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int sum = 0;
+
+            for(int i=0;i< array.Length;i++)
+            {
+                sum += array[i];
+            }
+            Console.WriteLine($"The sum of all elements in the array is: {sum}");
+            #endregion
+
             #endregion
         }
     }

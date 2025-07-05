@@ -526,23 +526,58 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to convert a decimal number into binary without using an array
 
-            Console.Write("Enter a number: ");
-            int Number = Convert.ToInt32(Console.ReadLine());
-            int[] res= new int[32]; 
-            int x = 0;
-            while (Number > 0)
+            //Console.Write("Enter a number: ");
+            //int Number = Convert.ToInt32(Console.ReadLine());
+            //int[] res= new int[32]; 
+            //int x = 0;
+            //while (Number > 0)
+            //{
+            //    res[x] = Number & 1;
+            //    Number=Number >> 1;
+            //    x++;
+            //}
+
+            //Console.Write("binary is: ");
+            //for (int i = x - 1; i >= 0; i--)
+            //{
+            //    Console.Write(res[i]);
+            //}
+            #endregion
+
+            #region  Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line
+
+            Console.Write("enter x1: ");
+            int x1 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("enter y1: ");
+            int y1 = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("enter x2: ");
+            int x2 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("enter y2: ");
+            int y2 = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("enter x3: ");
+            int x3 = Convert.ToInt16(Console.ReadLine());
+            Console.Write("enter y3: ");
+            int y3 = Convert.ToInt16(Console.ReadLine());
+
+            int lhs = (y2 - y1) * (x3 - x1);
+            int rhs = (y3 - y1) * (x2 - x1);
+
+            if(lhs == rhs)
             {
-                res[x] = Number & 1;
-                Number=Number >> 1;
-                x++;
+                Console.WriteLine("all points in same triangle");
+            }
+            else
+            {
+                Console.WriteLine("not all points in same triangle");
             }
 
-            Console.Write("binary is: ");
-            for (int i = x - 1; i >= 0; i--)
-            {
-                Console.Write(res[i]);
-            }
+
             #endregion
+
+
+
             #endregion
 
 

@@ -666,25 +666,48 @@ namespace NewCsharpProject
             //}
             #endregion
 
-
             #region Write a program in C# Sharp to count the frequency of each element of an array
 
-            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
-            int[] counter=new int[100];
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            //int[] counter=new int[100];
 
-            for (int i = 0; i < array1.Length; i++)
-            {
+            //for (int i = 0; i < array1.Length; i++)
+            //{
 
-                counter[array1[i]]++;
-            }
+            //    counter[array1[i]]++;
+            //}
 
-            for (int i = 0;i< array1.Length; i++)
-            {
-                
-                Console.WriteLine($"{array1[i]} repeated : {counter[array1[i]]}");
-            }
+            //for (int i = 0;i< array1.Length; i++)
+            //{
+
+            //    Console.WriteLine($"{array1[i]} repeated : {counter[array1[i]]}");
+            //}
 
             #endregion
+
+            #region Write a program in C# Sharp to find maximum and minimum element in an array
+
+            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+
+            int max = array1[0];
+            int min = array1[0];
+
+            for (int i = 1; i < array1.Length; i++)
+            {
+                if (array1[i] > max)
+                {
+                    max = array1[i];
+                }
+
+                if (array1[i] < min)
+                {
+                    min = array1[i];
+                }
+            }
+
+            Console.WriteLine($"Max is: {max} , min is {min}");
+            #endregion
+
             #endregion
         }
     }

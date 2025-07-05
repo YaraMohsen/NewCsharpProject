@@ -628,14 +628,41 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to find the sum of all elements of the array
 
-            int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int sum = 0;
+            //int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int sum = 0;
 
-            for(int i=0;i< array.Length;i++)
+            //for(int i=0;i< array.Length;i++)
+            //{
+            //    sum += array[i];
+            //}
+            //Console.WriteLine($"The sum of all elements in the array is: {sum}");
+            #endregion
+
+            #region Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order
+
+            int[] array1 = { 1, 3, 5, 7, 9 };
+            int[] array2 = { 2, 4, 6, 8, 10 };
+
+            int[] mergedArray = new int[array1.Length + array2.Length];
+           
+
+            for (int i = 0; i < (array1.Length); i++)
             {
-                sum += array[i];
+                    mergedArray[i] = array1[i];         
             }
-            Console.WriteLine($"The sum of all elements in the array is: {sum}");
+
+            for (int i = 0; i < (array2.Length); i++)
+            {
+                mergedArray[i+array1.Length] = array2[i];
+            }
+
+            Array.Sort(mergedArray);
+
+            Console.WriteLine("Merged and sorted array:");
+            for (int i=0;i<(array1.Length+array2.Length);i++ )
+            {
+                Console.Write(mergedArray[i] + " ");
+            }
             #endregion
 
             #endregion

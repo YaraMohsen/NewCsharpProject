@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Xml.Linq;
 class test_ref
 {
@@ -640,31 +641,50 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order
 
-            int[] array1 = { 1, 3, 5, 7, 9 };
-            int[] array2 = { 2, 4, 6, 8, 10 };
+            //int[] array1 = { 1, 3, 5, 7, 9 };
+            //int[] array2 = { 2, 4, 6, 8, 10 };
 
-            int[] mergedArray = new int[array1.Length + array2.Length];
-           
+            //int[] mergedArray = new int[array1.Length + array2.Length];
 
-            for (int i = 0; i < (array1.Length); i++)
-            {
-                    mergedArray[i] = array1[i];         
-            }
 
-            for (int i = 0; i < (array2.Length); i++)
-            {
-                mergedArray[i+array1.Length] = array2[i];
-            }
+            //for (int i = 0; i < (array1.Length); i++)
+            //{
+            //        mergedArray[i] = array1[i];         
+            //}
 
-            Array.Sort(mergedArray);
+            //for (int i = 0; i < (array2.Length); i++)
+            //{
+            //    mergedArray[i+array1.Length] = array2[i];
+            //}
 
-            Console.WriteLine("Merged and sorted array:");
-            for (int i=0;i<(array1.Length+array2.Length);i++ )
-            {
-                Console.Write(mergedArray[i] + " ");
-            }
+            //Array.Sort(mergedArray);
+
+            //Console.WriteLine("Merged and sorted array:");
+            //for (int i=0;i<(array1.Length+array2.Length);i++ )
+            //{
+            //    Console.Write(mergedArray[i] + " ");
+            //}
             #endregion
 
+
+            #region Write a program in C# Sharp to count the frequency of each element of an array
+
+            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            int[] counter=new int[100];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+
+                counter[array1[i]]++;
+            }
+
+            for (int i = 0;i< array1.Length; i++)
+            {
+                
+                Console.WriteLine($"{array1[i]} repeated : {counter[array1[i]]}");
+            }
+
+            #endregion
             #endregion
         }
     }

@@ -710,28 +710,79 @@ namespace NewCsharpProject
 
             #region Write a program in C# Sharp to find the second largest element in an array
 
-            int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
-            int max1 = array1[0];
-            int max2 = array1[0];
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            //int max1 = array1[0];
+            //int max2 = array1[0];
 
-            for (int i = 1; i < array1.Length; i++)
-            {
-               if(array1[i] > max1)
-                {
-                    max2 = max1;
-                    max1 = array1[i];       
-                }
-                else if (array1[i] > max2 && array1[i] < max1)
-                {
-                    max2 = array1[i];
-                }
+            //for (int i = 1; i < array1.Length; i++)
+            //{
+            //   if(array1[i] > max1)
+            //    {
+            //        max2 = max1;
+            //        max1 = array1[i];       
+            //    }
+            //    else if (array1[i] > max2 && array1[i] < max1)
+            //    {
+            //        max2 = array1[i];
+            //    }
 
-            }
+            //}
 
-            Console.WriteLine($"max1:{max1}, max2={max2}");
+            //Console.WriteLine($"max1:{max1}, max2={max2}");
             #endregion
 
+            #region Consider an Array of Integer values with size N, having values as    
+            Console.Write("Enter the array size: ");
+            int size = Convert.ToInt32(Console.ReadLine());
 
+            int[] arr = new int[size];
+            int[] repeated_value = new int[10];
+
+            int[] max_value = new int[10];
+
+            Console.WriteLine("Enter the array values:");
+            //take array values from the user
+            for (int i = 0; i <size; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            //count the repeated melements and the space between them
+            int[] first_place = new int [10];
+            int second_place = 0;
+            int dis = 0;
+
+            for (int i = 0; i < size; i++)
+            {
+
+                if (repeated_value[arr[i]] == 0)
+                {
+                    first_place[arr[i]] = i;
+                    repeated_value[arr[i]]=1;
+
+                }
+                else
+                {
+                    second_place = i;
+                    dis = second_place - first_place[arr[i]];
+                    max_value[arr[i]] = (max_value[arr[i]] > (dis) ? max_value[arr[i]] : (dis));
+                }
+            }
+
+            int max_dis = 0;
+            int index_dis = 0;
+
+            for (int i = 0; i < 10;i++)
+            { 
+            if(max_value[i] > max_dis)
+                {
+                    max_dis = max_value[i];
+                    index_dis= i;
+                }
+            }
+
+            Console.WriteLine($"The maximum distance between the repeated elements is: {max_dis} for the element: {index_dis}");
+            #endregion
 
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Xml.Linq;
 class test_ref
 {
@@ -578,39 +579,269 @@ namespace NewCsharpProject
 
             #region Question18
 
-            while (true)
+            //while (true)
+            //{
+            //    Console.Write("Enter a duration for worker: ");
+            //    int duration = Convert.ToInt32(Console.ReadLine());
+
+            //    if (duration >=2 && duration <3)
+            //    {
+            //        Console.WriteLine("highly efficient");
+            //    }
+            //    else if (duration >= 3 && duration <4)
+            //    {
+            //        Console.WriteLine(" instructed to increase their speed");
+            //    }
+            //    else if (duration >= 4 && duration < 5)
+            //    {
+            //        Console.WriteLine("provided with training to enhance their speed");
+            //    }
+            //    else if (duration >= 5)
+            //    {
+            //        Console.WriteLine("required to leave the company");
+            //    }
+            //    else
+            //    {
+
+            //    }
+
+            //}
+            #endregion
+
+            #endregion
+
+            #region Assigment4
+
+            #region Write a program that prints an identity matrix using for loop, in other words takes a value n from the user and shows the identity table of size n * n
+
+            //Console.Write("Enter the size of the identity matrix (n): ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //for(int i = 1; i <= n; i++)
+            //{
+            //    for (int j = 1; j <= n; j++)
+            //    {
+            //        Console.Write($"({i},{j} )");
+            //    }
+            //    Console.WriteLine();
+            //}
+            #endregion
+
+            #region Write a program in C# Sharp to find the sum of all elements of the array
+
+            //int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int sum = 0;
+
+            //for(int i=0;i< array.Length;i++)
+            //{
+            //    sum += array[i];
+            //}
+            //Console.WriteLine($"The sum of all elements in the array is: {sum}");
+            #endregion
+
+            #region Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order
+
+            //int[] array1 = { 1, 3, 5, 7, 9 };
+            //int[] array2 = { 2, 4, 6, 8, 10 };
+
+            //int[] mergedArray = new int[array1.Length + array2.Length];
+
+
+            //for (int i = 0; i < (array1.Length); i++)
+            //{
+            //        mergedArray[i] = array1[i];         
+            //}
+
+            //for (int i = 0; i < (array2.Length); i++)
+            //{
+            //    mergedArray[i+array1.Length] = array2[i];
+            //}
+
+            //Array.Sort(mergedArray);
+
+            //Console.WriteLine("Merged and sorted array:");
+            //for (int i=0;i<(array1.Length+array2.Length);i++ )
+            //{
+            //    Console.Write(mergedArray[i] + " ");
+            //}
+            #endregion
+
+            #region Write a program in C# Sharp to count the frequency of each element of an array
+
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            //int[] counter=new int[100];
+
+            //for (int i = 0; i < array1.Length; i++)
+            //{
+
+            //    counter[array1[i]]++;
+            //}
+
+            //for (int i = 0;i< array1.Length; i++)
+            //{
+
+            //    Console.WriteLine($"{array1[i]} repeated : {counter[array1[i]]}");
+            //}
+
+            #endregion
+
+            #region Write a program in C# Sharp to find maximum and minimum element in an array
+
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+
+            //int max = array1[0];
+            //int min = array1[0];
+
+            //for (int i = 1; i < array1.Length; i++)
+            //{
+            //    if (array1[i] > max)
+            //    {
+            //        max = array1[i];
+            //    }
+
+            //    if (array1[i] < min)
+            //    {
+            //        min = array1[i];
+            //    }
+            //}
+
+            //Console.WriteLine($"Max is: {max} , min is {min}");
+            #endregion
+
+            #region Write a program in C# Sharp to find the second largest element in an array
+
+            //int[] array1 = { 1, 3, 5, 7, 9, 11, 11, 2, 6, 8, 9, 4, 7, 12, 5, 5 };
+            //int max1 = array1[0];
+            //int max2 = array1[0];
+
+            //for (int i = 1; i < array1.Length; i++)
+            //{
+            //   if(array1[i] > max1)
+            //    {
+            //        max2 = max1;
+            //        max1 = array1[i];       
+            //    }
+            //    else if (array1[i] > max2 && array1[i] < max1)
+            //    {
+            //        max2 = array1[i];
+            //    }
+
+            //}
+
+            //Console.WriteLine($"max1:{max1}, max2={max2}");
+            #endregion
+
+            #region Consider an Array of Integer values with size N, having values as    
+            //Console.Write("Enter the array size: ");
+            //int size = Convert.ToInt32(Console.ReadLine());
+
+            //int[] arr = new int[size];
+            //int[] repeated_value = new int[10];
+
+            //int[] max_value = new int[10];
+
+            //Console.WriteLine("Enter the array values:");
+            ////take array values from the user
+            //for (int i = 0; i <size; i++)
+            //{
+            //    arr[i] = Convert.ToInt32(Console.ReadLine());
+            //}
+
+            ////count the repeated melements and the space between them
+            //int[] first_place = new int [10];
+            //int second_place = 0;
+            //int dis = 0;
+
+            //for (int i = 0; i < size; i++)
+            //{
+
+            //    if (repeated_value[arr[i]] == 0)
+            //    {
+            //        first_place[arr[i]] = i;
+            //        repeated_value[arr[i]]=1;
+
+            //    }
+            //    else
+            //    {
+            //        second_place = i;
+            //        dis = second_place - first_place[arr[i]];
+            //        max_value[arr[i]] = (max_value[arr[i]] > (dis) ? max_value[arr[i]] : (dis));
+            //    }
+            //}
+
+            //int max_dis = 0;
+            //int index_dis = 0;
+
+            //for (int i = 0; i < 10;i++)
+            //{ 
+            //if(max_value[i] > max_dis)
+            //    {
+            //        max_dis = max_value[i];
+            //        index_dis= i;
+            //    }
+            //}
+
+            //Console.WriteLine($"The maximum distance between the repeated elements is: {max_dis} for the element: {index_dis}");
+            #endregion
+
+            #region Given a list of space separated words, reverse the order of the words
+            //Console.Write("Enter a list of space-separated words:");
+
+            //string input=Console.ReadLine();
+            //string[] words = input.Split(' ');
+
+            //for (int i = words.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write(words[i] + " ");
+            //}   
+
+            #endregion
+
+            #region Question9
+
+            //int[,] array1 = new int[3, 3];
+            //int[,] array2 = new int[3, 3];
+
+            //Console.WriteLine("Enter the elements of the first 3x3 matrix:");
+
+            //for (int i= 0; i < 3; i ++)
+            //{
+            //    for(int j =0;j<3; j++)
+            //    {
+
+            //        array1[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
+
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        array2[i, j]= array1[i, j];
+            //    }
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.Write(array2[i, j] + " ");
+            //    }
+
+            //}
+            #endregion
+
+            #region question10 --same question8 in logic
+
+            int[] array = {1,2,3,4,5,6,7,8,9,10};
+
+            for (int i = array.Length - 1; i >= 0; i--)
             {
-                Console.Write("Enter a duration for worker: ");
-                int duration = Convert.ToInt32(Console.ReadLine());
-                
-                if (duration >=2 && duration <3)
-                {
-                    Console.WriteLine("highly efficient");
-                }
-                else if (duration >= 3 && duration <4)
-                {
-                    Console.WriteLine(" instructed to increase their speed");
-                }
-                else if (duration >= 4 && duration < 5)
-                {
-                    Console.WriteLine("provided with training to enhance their speed");
-                }
-                else if (duration >= 5)
-                {
-                    Console.WriteLine("required to leave the company");
-                }
-                else
-                {
-                    
-                }
-    
+                Console.Write(array[i] + " ");
             }
             #endregion
-
             #endregion
-
-
         }
     }
 }
-}
+

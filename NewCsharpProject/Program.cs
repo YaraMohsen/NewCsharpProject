@@ -799,38 +799,47 @@ namespace NewCsharpProject
 
             #region Question9
 
-            int[,] array1 = new int[3, 3];
-            int[,] array2 = new int[3, 3];
+            //int[,] array1 = new int[3, 3];
+            //int[,] array2 = new int[3, 3];
 
-            Console.WriteLine("Enter the elements of the first 3x3 matrix:");
+            //Console.WriteLine("Enter the elements of the first 3x3 matrix:");
 
-            for (int i= 0; i < 3; i ++)
-            {
-                for(int j =0;j<3; j++)
-                {
-                   
-                    array1[i, j] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
+            //for (int i= 0; i < 3; i ++)
+            //{
+            //    for(int j =0;j<3; j++)
+            //    {
 
-            for(int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    array2[i, j]= array1[i, j];
-                }
-            }
+            //        array1[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //}
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write(array2[i, j] + " ");
-                }
-               
-            }
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        array2[i, j]= array1[i, j];
+            //    }
+            //}
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.Write(array2[i, j] + " ");
+            //    }
+
+            //}
             #endregion
 
+            #region question10 --same question8 in logic
+
+            int[] array = {1,2,3,4,5,6,7,8,9,10};
+
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Console.Write(array[i] + " ");
+            }
+            #endregion
             #endregion
         }
     }

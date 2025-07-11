@@ -732,59 +732,70 @@ namespace NewCsharpProject
             #endregion
 
             #region Consider an Array of Integer values with size N, having values as    
-            Console.Write("Enter the array size: ");
-            int size = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter the array size: ");
+            //int size = Convert.ToInt32(Console.ReadLine());
 
-            int[] arr = new int[size];
-            int[] repeated_value = new int[10];
+            //int[] arr = new int[size];
+            //int[] repeated_value = new int[10];
 
-            int[] max_value = new int[10];
+            //int[] max_value = new int[10];
 
-            Console.WriteLine("Enter the array values:");
-            //take array values from the user
-            for (int i = 0; i <size; i++)
-            {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
-            }
+            //Console.WriteLine("Enter the array values:");
+            ////take array values from the user
+            //for (int i = 0; i <size; i++)
+            //{
+            //    arr[i] = Convert.ToInt32(Console.ReadLine());
+            //}
 
-            //count the repeated melements and the space between them
-            int[] first_place = new int [10];
-            int second_place = 0;
-            int dis = 0;
+            ////count the repeated melements and the space between them
+            //int[] first_place = new int [10];
+            //int second_place = 0;
+            //int dis = 0;
 
-            for (int i = 0; i < size; i++)
-            {
+            //for (int i = 0; i < size; i++)
+            //{
 
-                if (repeated_value[arr[i]] == 0)
-                {
-                    first_place[arr[i]] = i;
-                    repeated_value[arr[i]]=1;
+            //    if (repeated_value[arr[i]] == 0)
+            //    {
+            //        first_place[arr[i]] = i;
+            //        repeated_value[arr[i]]=1;
 
-                }
-                else
-                {
-                    second_place = i;
-                    dis = second_place - first_place[arr[i]];
-                    max_value[arr[i]] = (max_value[arr[i]] > (dis) ? max_value[arr[i]] : (dis));
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        second_place = i;
+            //        dis = second_place - first_place[arr[i]];
+            //        max_value[arr[i]] = (max_value[arr[i]] > (dis) ? max_value[arr[i]] : (dis));
+            //    }
+            //}
 
-            int max_dis = 0;
-            int index_dis = 0;
+            //int max_dis = 0;
+            //int index_dis = 0;
 
-            for (int i = 0; i < 10;i++)
-            { 
-            if(max_value[i] > max_dis)
-                {
-                    max_dis = max_value[i];
-                    index_dis= i;
-                }
-            }
+            //for (int i = 0; i < 10;i++)
+            //{ 
+            //if(max_value[i] > max_dis)
+            //    {
+            //        max_dis = max_value[i];
+            //        index_dis= i;
+            //    }
+            //}
 
-            Console.WriteLine($"The maximum distance between the repeated elements is: {max_dis} for the element: {index_dis}");
+            //Console.WriteLine($"The maximum distance between the repeated elements is: {max_dis} for the element: {index_dis}");
             #endregion
 
+            #region Given a list of space separated words, reverse the order of the words
+            Console.Write("Enter a list of space-separated words:");
 
+            string input=Console.ReadLine();
+            string[] words = input.Split(' ');
+
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
+                Console.Write(words[i] + " ");
+            }   
+
+            #endregion
 
 
 
